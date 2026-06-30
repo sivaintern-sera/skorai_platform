@@ -22,10 +22,12 @@ Skorai Platform starter with Neon Postgres and Prisma.
    cp .env.example .env
    ```
 
-3. Add your Neon connection strings to `.env`:
+3. Add your environment values to `.env`:
 
    - `DATABASE_URL`: pooled Neon connection string for app runtime
    - `DIRECT_URL`: direct Neon connection string for Prisma migrations
+   - `AUTH_SECRET`: long random secret for auth sessions
+   - `NEXTAUTH_URL`: local or deployed app URL, for example `http://localhost:3000`
 
 4. Generate the Prisma client:
 
@@ -53,7 +55,7 @@ Skorai Platform starter with Neon Postgres and Prisma.
 prisma/schema.prisma   Prisma data model
 prisma.config.ts       Prisma datasource and migration config
 src/db.ts              Shared Prisma client using Neon adapter
-.env.example           Neon environment variable template
+.env.example           Environment variable template
 ```
 
 ## License
